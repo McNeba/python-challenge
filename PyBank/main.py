@@ -34,7 +34,7 @@ with open(csv_path, newline="") as csv_file:
 
         # Reset the value of initial_revenue to the row I completed my analysis
         Initial_revenue = int(row["Profit/Losses"])
-        # print(prev_revenue)
+        # print(initial_profit_losses)
 
         # Determine the greatest increase
         if (profit_losses_change > greatest_increase[1]):
@@ -45,13 +45,13 @@ with open(csv_path, newline="") as csv_file:
             greatest_decrease[1] = profit_losses_change
             greatest_decrease[0] = row["Date"]
 
-        # Add to the revenue_changes list
+        # Add to the profit_losses_changes list
         profit_losses_changes.append(int(row["Profit/Losses"]))
 
-    # Set the Revenue average
+    # Set the profit_losses average
     avg_profit_losses = sum(profit_losses_changes) / len(profit_losses_changes)
     
-    # Show Output
+    # Print Output
     print()
     print()
     print()
