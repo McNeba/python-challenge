@@ -32,8 +32,8 @@ with open(csv_path, newline="") as csv_file:
         profit_losses_change = int(row["Profit/Losses"]) - initial_profit_losses
         # print(profit_losses_change)
 
-        # Reset the value of initial_revenue to the row I completed my analysis
-        Initial_revenue = int(row["Profit/Losses"])
+        # Reset the value of initial_profit_losses to the row I completed my analysis
+        Initial_profit = int(row["Profit/Losses"])
         # print(initial_profit_losses)
 
         # Determine the greatest increase
